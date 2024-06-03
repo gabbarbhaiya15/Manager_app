@@ -25,7 +25,7 @@ export default function Home(){
 
     
    useEffect(()=>{
-    axios.get("http://localhost:5000/alluser",{withCredentials:true})
+    axios.get("https://manager-app-8n8c.onrender.com/alluser",{withCredentials:true})
     .then((res)=>{
       console.log(res.data);
       const postarray = res.data.map(items=> items);
