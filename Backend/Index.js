@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const  port = process.env.PORT || 5000;
 app.use(bodyParser.json() );
 app.use(cors({credentials: true,
-origin:[ 'http://localhost:3000' ]
+origin:[ 'https://manager-app-1.onrender.com' ]
 }));
 app.use(cookieParser());
 mongoose.connect('mongodb+srv://gabbarbhaiya:Shubham123@gabbarbhaiya.2lvenhx.mongodb.net/Project5',{
