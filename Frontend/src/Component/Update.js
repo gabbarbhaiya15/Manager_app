@@ -22,7 +22,7 @@ console.log({id});
 useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get(`http://localhost:5000/userdetail/${id}`, {
+        const result = await axios.get(`https://manager-app-8n8c.onrender.com/userdetail/${id}`, {
           withCredentials: true,
         });
         setUserdata(result.data);
@@ -49,7 +49,7 @@ useEffect(()=>{
         console.log("registration started")
         
         
-         fetch(`http://localhost:5000/update/${id}`,{
+         fetch(`https://manager-app-8n8c.onrender.com/update/${id}`,{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
