@@ -1,0 +1,288 @@
+.dashboard {
+  width: 90vw !important;
+  height: 90vh !important;
+  transform: translate(8.5%, 10%);
+}
+
+.upper_box {
+  width: 95%;
+  height: 60%;
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: repeat(2, 47%);
+  gap: 2%;
+  padding: 1%;
+}
+
+.up_box_content {
+  color: whitesmoke;
+  border-radius: 8px;
+  padding: 5px;
+  padding-left: 15px;
+  border: 1px solid rgb(68, 64, 64);
+}
+
+.up_box_a_type {
+  width: 97%;
+  height: 78%;
+  display: flex;
+  padding-left: 10%;
+  padding-top: 1%;
+  justify-content: center;
+  flex-direction: column;
+  overflow: auto;
+}
+.up_box_b_type{
+ 
+  width: 97%;
+  height: 78%;
+padding: 1%;
+display: flex;
+justify-content: space-evenly;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #262627 #787878;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #787878;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #262627;
+  border-radius: 10px;
+  border: 3px groove #a1a1a1;
+}
+
+.user_dashboard {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+}
+
+.dashboard_avatar {
+  width: 30px;
+  height: 30px;
+  clip-path: circle(at center);
+  object-fit: cover;
+  object-position: center right;
+}
+
+.pic_name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.view {
+  height: 3vh;
+  width: 17%;
+  border-radius: 10px;
+  border: none;
+  background-color: red;
+  color: rgb(241, 240, 240);
+  font-weight: 700;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.total_user {
+  clip-path: circle(at center);
+  background-image: linear-gradient(to right top, #1c1b1c, #242325, #2c2b2d, #343437, #3c3d40, #45474a, #4d5155, #565b5f, #63696c, #71787a, #7f8787, #8e9695);
+  width: 30%;
+  height: 97%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+.total_team_member {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.total_team_member_box-b, .total_team_member_box-middle {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.icon_container_text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.icon_container {
+  width: 4vw;
+  height: 2.2vw;
+  clip-path: circle(at center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(185, 8, 8);
+  margin-right: 10%;
+}
+
+.icon {
+  width: 23%;
+  height: 30%;
+}
+
+h7 {
+  font-size: 4vh;
+  font-weight: 800;
+}
+
+p {
+  font-weight: 600;
+}
+
+.lower_box {
+  width: 92%;
+  height: 35%;
+  padding: 1%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left, .right {
+  width: 28%;
+  color: whitesmoke;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid rgb(68, 64, 64);
+}
+
+.creator_detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.creator_profile {
+  width: 30%;
+  height: 8vh;
+  clip-path: circle(at center);
+  background-color: #262627;
+}
+
+.creator_profile_pic {}
+
+.Creator_name {
+  color: #333;
+  font-size: large;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.creator-subtitle {
+  color: #859ba8;
+  font-size: 0.8em;
+}
+
+.Link_box {
+  width: 45%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.link_icon {
+  height: 3vh !important;
+}
+
+.middle {
+  width: 40%;
+  border: 1px solid rgb(68, 64, 64);
+  color: whitesmoke;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon_container_text_help {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.view
+ a {
+  color: #f3f3f4;  /* Change the color to match the button text color */
+  text-decoration: none; /* Remove the underline */
+}
+.user_dashboard a {
+  color: #f3f3f4;  /* Change the color to match the button text color */
+  text-decoration: none; /* Remove the underline */
+}
+@media only screen and (max-width: 600px) {
+  .dashboard{
+  
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .upper_box,
+  .lower_box{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 2% !important;
+    transform: translate(8%);
+    
+   
+  }
+  .lower_box{
+
+    margin-top: 13%;
+   
+   }
+   .left,
+   .right,
+   .middle{
+    width: 100%;
+    margin-bottom: 5%;
+   }
+   .view{
+   width: 30%;
+   font-size: 100%;
+   
+
+   }
+   .up_box_a_type{
+    font-size: 70%;
+    font-weight: 200;
+    
+   }
+   .icon_container{
+    width: 5vw; height:5vh
+   }
+   .icon{
+    width: 70%;
+   }
+
+}

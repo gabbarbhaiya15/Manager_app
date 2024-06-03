@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "user_card_font";
+  src: url("./HappyLucky-gxnZP.ttf");
+}
+
+
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(78, 49, 49, 0.38);
+  
+  
+  /* Light red background with 50% transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading{
+  font-weight: 700;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.popup {
+  background-color: #282828 !important; 
+  width: 35%;
+  height: 90%;
+  padding: 3%;
+  padding-bottom: 0.5%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  color: white !important;
+  margin-top: 6vh;
+
+  
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+form {
+  height: 87%;
+ margin-top: 10%;
+  padding: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  font-weight: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 70%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: 2px solid rgb(61, 60, 60);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+input:focus {
+  outline: none;
+}
+label{
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit_button {
+  margin-top: 2%;
+  padding: 8px 15px;
+  margin-left: 25% ;
+  width: 27vh;
+  border: none;
+  border-radius: 15px;
+  background-color: #ff0000;
+  color: white;
+  cursor: pointer;
+}
+
+.submit_button:hover {
+  background-color: #0056b3;
+}
+.line{
+  height: 0.25vh;
+  background-color: rgb(91, 91, 91) !important;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color */
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Style for the arrow icon */
+.custom-select::after {
+  content: '\25BC'; /* Downward arrow */
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+/* Style for the options container */
+.custom-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #222; /* Dark background color for options */
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  z-index: 10;
+  display: none;
+}
+
+/* Style for individual option */
+.custom-option {
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for options */
+.custom-option:hover {
+  background-color: #444;
+}
+
+/* Show options when select box is focused */
+.custom-select:focus + .custom-options {
+  display: block;
+}
+
+/* Show selected option */
+.custom-select option[selected] {
+  display: none;
+}
+
+/* Style for selected option */
+.custom-select option[selected]::before {
+  content: 'Selected: ';
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  .popup{
+    width: 85vw;
+    margin-left: 9vw;
+    height: 70vh;
+  }
+}
