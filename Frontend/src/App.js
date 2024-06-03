@@ -3,7 +3,7 @@ import  { BrowserRouter as Router,Switch,Route, BrowserRouter, Routes} from "rea
 
 
 import './App.css';
-import NewUser from './Component/Newuser';
+
 import Home from './Component/Home';
 import Navbar from './Component/Navbar';
 import Update from './Component/Update';
