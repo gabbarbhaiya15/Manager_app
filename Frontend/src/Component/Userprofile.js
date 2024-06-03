@@ -14,7 +14,7 @@ export default function Userprofile() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get(`http://localhost:5000/userdetail/${userid}`, {
+        const result = await axios.get(`https://manager-app-8n8c.onrender.com/userdetail/${userid}`, {
           withCredentials: true,
         });
         setData(result.data);
@@ -32,7 +32,7 @@ export default function Userprofile() {
     const fetchTeamData = async () => {
       try {
         console.log('Fetching team data for user:', userid);
-        const result = await axios.get(`http://localhost:5000/abc/${userid}`, {
+        const result = await axios.get(`https://manager-app-8n8c.onrender.com/abc/${userid}`, {
           withCredentials: true,
         });
         console.log(result.data);
@@ -48,7 +48,7 @@ export default function Userprofile() {
   // Add user to team
   const addTeamData = async () => {
     try {
-      await axios.post('http://localhost:5000/team', {
+      await axios.post('https://manager-app-8n8c.onrender.com/team', {
         name: `${data.first_name} ${data.last_name}`,
         memberIds: [userid],
         team_pic: `${data.avatar}`
@@ -62,7 +62,7 @@ export default function Userprofile() {
   // Remove user
   const removeUser = async () => {
     try {
-      await axios.delete(`http://localhost:5000/remove/${userid}`, { withCredentials: true });
+      await axios.delete(`https://manager-app-8n8c.onrender.com/remove/${userid}`, { withCredentials: true });
       navigate("/");
     } catch (err) {
       console.error("Error while deleting user:", err);
