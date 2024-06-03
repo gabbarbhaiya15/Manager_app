@@ -17,7 +17,7 @@ useEffect(()=>{
         console.log("registration started")
         
         
-         fetch('http://localhost:5000/user',{
+         fetch(https://manager-app-8n8c.onrender.com/user',{
             method:"post",
             headers:{
                 "Content-Type":"application/json",
