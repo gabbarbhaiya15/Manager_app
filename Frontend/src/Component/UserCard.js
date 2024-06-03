@@ -16,7 +16,7 @@ export default function Card({id,first_name,last_name,email,gender,domain,avatar
        
         console.log("registration started")
       
-        await axios.post('http://localhost:5000/team',{    name: `${first_name} ${last_name}`,
+        await axios.post('https://manager-app-8n8c.onrender.com/team',{    name: `${first_name} ${last_name}`,
         memberIds: [id], team_pic: `${avatar}`},{withCredentials:true})
         .then((res)=>{alert("team member added")
      
