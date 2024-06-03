@@ -12,7 +12,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchTeamData = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/allteam');
+        const { data } = await axios.get('https://manager-app-8n8c.onrender.com/allteam');
         setUser(data);
         setTotalTeamMember(data.length);
       } catch (error) {
@@ -26,7 +26,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/alluser", { withCredentials: true });
+        const { data } = await axios.get("https://manager-app-8n8c.onrender.com/alluser", { withCredentials: true });
         setLatestUsers(data.slice(0, 4));
         setTotalUsers(data.length);
       } catch (error) {
