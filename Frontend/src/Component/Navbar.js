@@ -14,7 +14,7 @@ export default function Navbar() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/allteam');
+        const response = await axios.get('https://manager-app-8n8c.onrender.com/allteam');
         setUsers(response.data);
       } catch (error) {
         console.error(error);
@@ -33,7 +33,7 @@ export default function Navbar() {
     if (query) {
       try {
         const response = await axios.post(
-          "http://localhost:5000/search",
+          "https://manager-app-8n8c.onrender.com/search",
           { query },
           { withCredentials: true }
         );
