@@ -45,6 +45,11 @@ app.use('/allteam',allteams)
 app.use('/abc',Teammember)
 
 
+app.use(express.static('Frontend/public'))
+    
+    app.get("*",(req,res)=>{
+        res.sendFile(path.resolve(__dirname,'Frontend','public','index.html'))
+    })
 
 
 
